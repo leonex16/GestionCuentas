@@ -14,9 +14,9 @@ app.engine('.hbs', expHbs({ // Only the motor is configured but isnt being used
     layoutsDir: path.join(app.get('views'), 'layouts'), // /home/leo/Proyectos/GestionCuentas/src/views/layouts
     partialsDir: path.join('views', 'partials'), // /home/leo/Proyectos/GestionCuentas/src/views/partials
     extname: '.hbs', // The file extension will be .hbs instead .handlebars,
-    helpers: require('.lib/handlebars') // File to create functions
+    helpers: require('./lib/handlebars') // File to create functions
 }));
-app.set('views engine', '.hbs'); // Using motor
+app.set('view engine', '.hbs'); // Using motor
 
 // Middlewares: Functions that are executed every time a client makes a request to the server
 app.use(morgan('dev'));
